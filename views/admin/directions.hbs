@@ -1,0 +1,53 @@
+<div class="content-page">
+    <div class="col-sm-12 col-lg-6">
+        <div class="alert alert-secondary mb-3" role="alert">
+            <div class="iq-alert-icon">
+                <i class="ri-information-line"></i>
+            </div>
+            <div class="iq-alert-text">Texnikumda<b>tashkil etilgan</b>yo'nalishlarni kiritishingiz mumkin</div>
+        </div>
+        <div class="iq-card">
+            <div class="iq-card-header d-flex justify-content-between">
+                <div class="iq-header-title">
+                    <h4 class="card-title">Yo'nalish qo'shish</h4>
+                </div>
+            </div>
+            <div class="iq-card-body">
+                <form action="/admin/directions/add" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                   <input type="text" class="form-control" id="name" name="name">
+                 </div>
+                    <label for="img">Yo'nalishga oid rasm</label>
+                    <input type="file" class="form-control-file" id="img" value="img" name="img">
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Haqida</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" style="height: 118px;" name="info"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2 mt-2">Yuborish</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            {{#if direction.length}}
+            {{#each direction}}
+
+            <div class="col-sm-3">
+                     <div class="iq-card iq-card-block iq-card-stretch iq-card-height iq-mb-3">
+                        <img src="/images/desktop/{{img}}" class="card-img-top" alt="">
+                        <div class="iq-card-body">
+                           <h4 class="card-title">{{name}} </h4>
+                           <p class="card-text">{{info}} </p>
+                           <a href="/admin/direction/{{id}}" class="btn btn-primary">Batafsil</a>
+                        </div>
+                     </div>
+             </div>
+            {{/each}}
+            {{else}}
+            {{/if}}
+        </div>
+    </div>
+</div>

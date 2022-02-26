@@ -1,0 +1,54 @@
+<div class="content-page" id="content-page">
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-sm-12  col-lg-6">
+            <div class="iq-card">
+               <div class="iq-card-header d-flex justify-content-between">
+                  <div class="iq-header-title">
+                     <h4 class="card-title">Axborot kiritish</h4>
+                  </div>
+               </div>
+               <div class="iq-card-body">
+                  <p>Axborto xizmati bo'limiga Asosiy qismiga</p>
+                  <form action="/admin/informationBig" method="POST" enctype="multipart/form-data">
+                     <div class="form-group">
+                        <label for="name">Axborot mavzusi nomi</label>
+                        <input type="text" class="form-control" placeholder="Axborot mavzusi nomi" id="name"
+                           name="name">
+                     </div>
+                     <div class="form-group">
+                        <label for="img1">mavzuga oid rasm:</label>
+                        <input type="file" class="form-control-file" id="img1" name="img1">
+                     </div>
+                     <div class="form-group">
+                        <label for="infor">Axborot haqida informatsiya</label>
+                        <textarea class="form-control" id="infor" name="infor" rows="5"
+                           placeholder="Iltimos so'zlarni o'rtasida joy tashlab yozing"></textarea>
+                     </div>
+                     <button type="submit" class="btn btn-primary">Submit</button>
+                     <a href="/admin/axborot-xizmati" class="btn iq-bg-danger">Cancel</a>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         {{#if inforBig.length}}
+         {{#each inforBig}}
+         <div class="col-sm-12 col-lg-4">
+            <div class="iq-card iq-card-block iq-card-stretch iq-card-height iq-mb-3">
+               <img src="/images/desktop/{{img1}}" class="card-img-top" alt="">
+               <div class="iq-card-body">
+                  <h4 class="card-title">{{name}} </h4>
+                  <p class="card-text">{{infor}}  </p>
+                  <a href="/admin/informationbigUpdate/{{id}}" class="btn btn-primary">Update</a>
+                  <a href="/admin/informationbigUpdate/remove/{{id}}" class="btn btn-dark">Remove</a>
+               </div>
+            </div>
+         </div>
+         {{/each}}
+         {{else}}
+         {{/if}}
+      </div>
+   </div>
+</div>

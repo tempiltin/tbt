@@ -1,0 +1,152 @@
+<section id="hero" class=" justify-cntent-center align-items-center">
+  <div class="container ">
+    <div class="row justify-content-around align-content-center ">
+
+      <div class="col-lg-11 main-bg">
+        <h1 style="text-align: center; " class="mt-3">NARPAY XIZMAT KO'RSATISH TEXNIKUMI</h1>
+      </div>
+
+    </div>
+  </div>
+  <div class="container ">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 ">
+        <div style="  box-shadow: 0px 2px 15px rgb(0 0 0 / 10%);" id="carouselExampleControlsNoTouching"
+          class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/default.jpg" class="d-block w-100 h100" alt="...">
+            </div>
+            {{#if carusel.length}}
+            {{#each carusel}}
+            <div class="carousel-item">
+              <img src="/images/desktop/{{img}}" class="d-block w-100 h100" alt="...">
+            </div>
+            {{/each}}
+            {{/if}}
+
+
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+            data-bs-slide="prev">
+            <img src="assets/img/next-17.svg" alt="" style="transform: rotate(-180deg);">
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+            data-bs-slide="next">
+            <img src="assets/img/next-17.svg" alt="">
+          </button>
+        </div>
+
+      </div>
+      <div class="col-lg-3">
+        <div class="index-main-card">
+          <div class="cont">
+            <h4>Foydali saytlar</h4>
+          </div>
+          <div class="mycontainer">
+            <ul>
+
+              <li><a href="https://pm.gov.uz/ru">Prezident virtual qabulxonasi</a></li>
+              <li><a href="https://my.gov.uz/ru">Yagona interaktiv davlat xizmatlari portali</a></li>
+              <li><a href="https://gov.uz/uz">O`zbekiston Respublikasi Hukumat portali</a></li>
+              <li><a href="https://edu.uz/uz">O'zbekiston Respublikasi Oliy va o'rta maxsus ta'lim vazirligi</a></li>
+              <li><a href="https://dtm.uz/">Davlat test markazi</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="index-main-card mt-2">
+          <div class="mycontainer">
+            <ul>
+              <li><a href="#!">Faxrlarimiz</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-8 ">
+        <div class="index-main-card">
+          <div class="cont">
+            <h4>Kun yangiliklari</h4>
+          </div>
+          <div class="mycontainer">
+
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3">
+
+      </div>
+    </div>
+  </div>
+  <div class="container pt-5 pb-5">
+
+    <div class="row justify-content-center">
+      <div class="col-lg-11">
+        <div class="clients-slider swiper ">
+          <div class="swiper-wrapper align-items-center">
+
+            {{#if briend.length}}
+            {{#each briend}}
+
+            <div class="swiper-slide"><img src="/images/desktop/{{briend}}" class="img-fluid" alt=""></div>
+
+            {{/each}}
+            {{/if}}
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section><!-- End Hero -->
+<section id="cta" class="cta">
+  <div class="container">
+
+    <div class="row justify-content-around aos-init aos-animate " data-aos="zoom-in">
+ 
+      {{#if static.length}}
+      {{#each static}}
+         <div class="col-lg-2 col-md-2 col-sm-6  mt-2">
+        <img style="width: 100%;" class="mb-2" src="/images/staticss/sohalar.svg" alt="">
+        <h4 class="H1-color align-items-center text-center ">Yo'nalishlar</h4>
+        <h1 class="H1-color align-items-center text-center purecounter " data-purecounter-start="0" data-purecounter-end="{{direct}}"
+          data-purecounter-duration="1">{{direct}}</h1>
+
+      </div>
+      <div class="col-lg-2 col-md-2 col-sm-6  mt-2">
+        <img style="width: 100%;" class="mb-2" src="/images/staticss/student.svg" alt="">
+        <h4 class="H1-color align-items-center text-center ">Talabalar</h4>
+        <h1 class="H1-color align-items-center text-center purecounter " data-purecounter-start="0" data-purecounter-end="{{student}}"
+          data-purecounter-duration="1">{{student}}</h1>
+      </div>
+      <div class="col-lg-2 col-md-2 col-sm-6  mt-2">
+        <img style="width: 100%;" class="mb-2" src="/images/staticss/teacher.svg" alt="">
+        <h4 class="H1-color align-items-center text-center ">O'qituvchilar</h4>
+        <h1 class="H1-color align-items-center text-center purecounter " data-purecounter-start="0" data-purecounter-end="{{teacher}}"
+          data-purecounter-duration="1">{{teacher}}</h1>
+      </div>
+      <div class="col-lg-2 col-md-2 col-sm-6  mt-2 ">
+        <img style="width: 100%;" class="mb-2"  src="/images/staticss/hamkor.svg" alt="">
+
+        <h4 class="H1-color align-items-center text-center  ">Hamkorlar</h4>
+        <h1 class="H1-color align-items-center text-center purecounter " data-purecounter-start="0" data-purecounter-end="{{partner}}"
+          data-purecounter-duration="1">{{partner}}</h1>
+      </div>
+      {{/each}}
+      {{/if}}
+    </div>
+
+  </div>
+</section>
+<main id="main" class="pt-5"></main>
+<main class="main-footer">
+  <div class="container mt-3">
+    <div class="row justify-content-center">
+      <div class="col-lg-11">
+        <p>NARPAY XIZMAT KO'RSATISH TEXNIKUMI <span> &copy; </span><a href="#!">By Dev</a></p>
+      </div>
+    </div>
+  </div>
+</main><!-- End Footer -->

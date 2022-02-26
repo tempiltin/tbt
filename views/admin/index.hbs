@@ -1,0 +1,73 @@
+<div class="content-page">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-lg-6">
+                     <div class="iq-card">
+                        <div class="iq-card-header d-flex justify-content-between">
+                           <div class="iq-header-title">
+                              <h4 class="card-title">Bosh sahifaga statestika qo'shish</h4>
+                           </div>
+                        </div>
+                        <div class="iq-card-body">
+                          
+                           <form action="/admin/static" method="POST">
+                              <div class="row">
+                                 <div class="col-lg-6 col-md-6 col-sm-12 ">
+                                    <input type="number" class="form-control" placeholder="Yo'nalish qiymatini kiriting" name="direct">
+                                 </div>
+                                 <div class="col-lg-6 col-md-6 col-sm-12 ">
+                                    <input type="number" class="form-control" placeholder="Talabalar sonini kiriting" name="student">
+                                 </div>
+                                 <div class="col-lg-6 col-md-6 col-sm-12 mt-2 ">
+                                    <input type="number" class="form-control" placeholder="O'qtuvchilar sonini kiriting" name="teacher">
+                                 </div>
+                                 <div class="col-lg-6 col-md-6 col-sm-12 mt-2 ">
+                                    <input type="number" class="form-control" placeholder="Hamkorlar sonini kiriting" name="partner">
+                                 </div>
+                                 <div class="col-12">
+                                     <button type="submit" class="btn btn-primary mt-2">Yuborish</button>
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+            </div>
+            <div class="col-sm-12 col-lg-6">
+                     <div class="iq-card">
+                        <div class="iq-card-header d-flex justify-content-between">
+                           <div class="iq-header-title">
+                              <h4 class="card-title">Bosh sahifadagi statestika</h4>
+                           </div>
+                        </div>
+                        <div class="iq-card-body">
+                        {{#if static.length}}
+                        {{#each static}}
+                        <div class="row">
+                            <div class="col">
+                                <b>Yo'nalishlar</b>
+                                <h1>{{direct}}</h1>
+                            </div>
+                            <div class="col">
+                                <b>Talabalar</b>
+                                <h1>{{student}}</h1>
+                            </div>
+                            <div class="col">
+                                <b>O'qituvchilar</b>
+                                <h1>{{teacher}}</h1>
+                            </div>
+                            <div class="col">
+                                <b>Hamkorlar</b>
+                                <h1>{{partner}}</h1>
+                            </div>
+                            <div class="col-12">
+                               <a href="/admin/update/{{id}}" class="btn btn-primary">Update</a>
+                            </div>
+                        </div>
+                        {{/each}}
+                        {{/if}}
+                        </div>
+                     </div>
+            </div>
+        </div>
+    </div>
+</div>

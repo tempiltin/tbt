@@ -1,0 +1,28 @@
+<div class="content-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                {{#if direct}}
+                <div class="iq-card iq-card-block iq-card-stretch iq-card-height iq-mb-3">
+                    <img src="/images/desktop/{{direct.img}}" class="card-img-top" alt="">
+                    <div class="iq-card-body">
+                        <h4 class="card-title">{{direct.name}} </h4>
+                        <p class="card-text">{{direct.info}} </p>
+                        <div style="width: 100%;" class="d-flex justify-content-around">
+                            <a class="btn btn-primary" href="/admin/direction/delete/{{direct.id}}">Delete</a>
+                            <a class="btn btn-primary" href="/admin/direction/update/{{direct.id}}">Update</a>
+                        </div>
+                    </div>
+                </div>
+                {{else}}
+                <div class="alert alert-warning" role="alert">
+                    <div class="iq-alert-icon">
+                        <i class="ri-alert-line"></i>
+                    </div>
+                    <div class="iq-alert-text">Sahifada endi<b> bu yo'nalish</b> mavjud emas !</div>
+                </div>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</div>

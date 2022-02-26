@@ -1,0 +1,50 @@
+<!-- Sign in Start -->
+<section class="sign-in-page">
+    <div class="container p-0">
+        <div class="row no-gutters height-self-center">
+            <div class="col-sm-12 align-self-center page-content rounded">
+                <div class="row m-0">
+                    <div class="col-sm-12 sign-in-page-data">
+                        <div class="sign-in-from bg-dark rounded">
+                            {{#if registerError}}
+                            <p class="error-msg">{{registerError}}</p>
+                            {{/if}}
+                            <h3 class="mb-0 text-center text-white">Sign Up</h3>
+                            <p class="text-center text-white">Enter your email address and password to access admin
+                                panel.</p>
+                            <form action="/auth/register" method="POST" class="mt-4 form-text">
+
+                                <div class="form-group">
+                                    <label for="name">Your Full Name</label>
+                                    <input type="text" class="form-control mb-0" id="name" placeholder="Your Full Name"
+                                        name="name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="img">Your image</label>
+                                    <input type="text" class="form-control mb-0" id="img" placeholder="Your image"
+                                        name="img">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email address</label>
+                                    <input type="email" class="form-control mb-0" id="email" placeholder="Enter email"
+                                        name="email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" class="form-control mb-0" id="password"
+                                        placeholder="Password" name="password">
+                                </div>
+                                <div class="sign-info text-center">
+                                    <button type="submit" class="btn btn-white d-block w-100 mb-2">Sign Up</button>
+                                    <span class="text-white d-inline-block line-height-2">Already Have Account ? <a
+                                            href="/auth/login" class="text-white">Log In</a></span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Sign in END -->
